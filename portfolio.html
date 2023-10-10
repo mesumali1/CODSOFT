@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mesum Ali - Portfolio</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set a background color and text color for the entire page */
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #292b2c;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo h1 {
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Style the about section */
+        #about {
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        /* Create a two-column layout for the About section */
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 50%;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .about-image img {
+            max-width: 100%;
+            max-height: 700px; /* Set a fixed maximum height (adjust as needed) */
+            width: auto;
+            height: auto;
+        }
+
+        .about-bio {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .about-bio h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-bio p {
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Style the buttons in the About section */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .contact-button,
+        .resume-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #292b2c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover,
+        .resume-button:hover {
+            background-color: #555;
+        }
+
+        /* Style the skills section */
+        #skills {
+            background-color: #f8f8f8;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #skills ul {
+            list-style: none;
+        }
+
+        #skills ul li {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #292b2c;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Style the two-column layout for the Projects section */
+        /* Style the two projects in one row and two in another layout for the Projects section */
+        #projects {
+            background-color: #fff;
+            padding: 40px;
+        }
+
+        .project-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .project {
+            flex: 1; /* Each project takes up 50% of the available space */
+            display: flex;
+        }
+
+        .project-image {
+            flex: 1; /* Image column takes up 50% of project space */
+        }
+
+        .project-image img {
+            max-width: 100%;
+        }
+
+        .project-description {
+            flex: 1; /* Description column takes up 50% of project space */
+            padding: 0 20px; /* Add some spacing between the image and description */
+        }
+
+        .project-description h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project-description p {
+            font-size: 16px;
+        }
+
+        /* Style the "More Projects" button */
+        .more-projects-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .more-projects-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #292b2c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .more-projects-link:hover {
+            background-color: #555;
+        }
+
+        .section-gap {
+            height: 20px; /* Adjust the height as needed to create the desired gap */
+        }
+
+        /* Style the contact section */
+        #contact {
+            background-color: #292b2c;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #292b2c;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>MESUM ALI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="PXL_20230528_150438545.jpg" alt="Mesum Ali">
+            </div>
+            <div class="about-bio">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I'm Mesum Ali, a passionate web developer with a strong foundation in creating dynamic and user-friendly websites. I specialize in front-end and back-end development, combining my creative design skills with my technical expertise to deliver engaging online experiences. With a keen eye for detail and a commitment to staying up-to-date with the latest web technologies, I strive to build responsive and visually appealing websites that not only meet but exceed client expectations. Let's collaborate to bring your web project to life!
+                </p>
+                <div class="buttons">
+                    <a href="#contact" class="contact-button">Contact</a>
+                    <a href="Mesum_Resume.pdf" download class="resume-button">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>UI/UX Design</li>
+            <li>React</li>
+            <li>React Native</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-row">
+            <div class="project">
+                
+                <div class="project-description">
+                    <h3>RESTAURANT BILLING SYSTEM</h3>
+                    <p>Programmed a restaurant billing system using OOP concepts. The management system calculates total bill based on the food ordered and generates receipt forthe client.</p>
+                </div>
+
+                <div class="project-image">
+                    <img src="Restaurant-Management-System.png" alt="rbs">
+                </div>
+            </div>
+            <div class="project">
+                
+                <div class="project-description">
+                    <h3>FOOD ORDER WEBSITE DEVELOPMENT</h3>
+                    <p>Are you hungry and looking for a convenient way to satisfy your cravings? Look no further! Our Food Order Website project aims to provide a seamless and user-friendly platform for ordering your favorite dishes from local restaurants. Whether you're craving pizza, sushi, burgers, or anything in between, our website will offer a diverse selection of menus to choose from.</p>
+                </div>
+
+                <div class="project-image">
+                    <img src="Food Order.png" alt="fow">
+                </div>
+            </div>
+        </div>
+        <div class="project-row">
+            <div class="project">
+                
+                <div class="project-description">
+                    <h3>Project Title 3</h3>
+                    <p>Description of Project 3.</p>
+                </div>
+
+                <div class="project-image">
+                    <img src="project3.jpg" alt="Project 3">
+                </div>
+            </div>
+            <div class="project">
+                
+                <div class="project-description">
+                    <h3>Project Title 4</h3>
+                    <p>Description of Project 4.</p>
+                </div>
+
+                <div class="project-image">
+                    <img src="project4.jpg" alt="Project 4">
+                </div>
+            </div>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <div class="more-projects-button">
+        <a href="#more-projects" class="more-projects-link">More Projects</a>
+    </div>
+    
+    <div class="section-gap"></div>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Email: mesumali0412@gmail.com</p>
+            <p>Phone: +92 314-2777396</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Mesum Ali | <a href="Mesum_Resume.pdf" download>Download Resume (PDF)</a>
+    </footer>
+</body>
+</html>
